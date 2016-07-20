@@ -1,7 +1,41 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>eu.asjervis</groupId>
   <artifactId>eqc</artifactId>
+  <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>Eloquent Quantum Chess</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <!-- Parameters -->
+    <version.jdk>1.8</version.jdk>
+    <!-- Dependencies -->
+    <version.junit>4.12</version.junit>
+    <version.maven-compiler-plugin>3.5.1</version.maven-compiler-plugin>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>eqc</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${version.maven-compiler-plugin}</version>
+        <configuration>
+          <source>${version.jdk}</source>
+          <target>${version.jdk}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
