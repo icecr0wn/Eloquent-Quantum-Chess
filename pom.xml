@@ -12,11 +12,28 @@
     <!-- Parameters -->
     <version.jdk>1.8</version.jdk>
     <!-- Dependencies -->
+    <version.guice>4.1.0</version.guice>
+    <version.servlet-api>4.0.0-b01</version.servlet-api>
     <version.junit>4.12</version.junit>
     <version.maven-compiler-plugin>3.5.1</version.maven-compiler-plugin>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <version>${version.guice}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.inject.extensions</groupId>
+      <artifactId>guice-servlet</artifactId>
+      <version>${version.guice}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${version.servlet-api}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
